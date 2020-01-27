@@ -14,11 +14,28 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 app.get("/",(req,res)=>{
 
-    res.render("index",{
+    res.render("home",{
         title: "Home",
         headingInfo : "Home Page",
-        randomContent: "BLAH BLAH BLHA"
+        randomContent: "Home Page"
     })
+});
+app.get("room-listing",(req,res)=>{
+
+    res.render("roomlisting",{
+        title: "roomlisting",
+        headingInfo : "Room Listing Page",
+    });
+});
+app.get("/user-registration",(req,res)=>{
+
+        res.render("userregistration",{
+            title: "userregistration",
+            headingInfo : "User Registration Page",
+    
+});
+    
+
 });
 const PORT=3000;
 app.listen(3000,()=>{
