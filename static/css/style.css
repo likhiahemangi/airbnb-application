@@ -1,1 +1,161 @@
- 
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}/*section*/
+section{
+      display: grid;
+      grid-template-columns: 2fr 2fr 1fr;
+}
+i{ 
+    margin-top: 1rem;
+    padding-left: 4rem;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+    text-align: center;    
+ }
+ /*header*/
+ header{
+    background-image: url(../img/roomfooter.jpg);
+    backface-visibility: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 45rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+ }
+ .logo{
+    margin: 2rem;
+    width: 4rem; 
+    height: 5rem;
+ }
+ .nav{
+    margin-top:8rem;
+    font-size: 2rem;
+    color:black;
+    text-decoration-line: none;
+    text-align: right;
+    padding-left: 10rem;
+ }
+ p{
+     margin-top: 5rem;
+     margin-left: auto;
+     text-align: center;
+     font-size: 3rem;
+    color: black;
+ }
+
+ /*main*/
+ form{
+     margin-top: 2rem;
+     padding-left: 10rem;
+     display: flex;
+ }
+ h4{
+     padding-left: 2rem;
+ }
+ input{
+     border: 2px solid burlywood;
+     margin-left: 1em;
+     padding-left: 10rem;
+ }
+select{
+     margin-left: 2rem;
+     height: 6rem;
+     width: 10rem;
+     padding-left: 10rem;
+     border: 2px solid burlywood;
+ }
+ button{
+     height: 2rem;
+     width: 2rem;
+ }
+ button{
+     margin-left: 1rem;
+    height: 5rem;
+    width: 15rem;
+    float: right;
+    border: 2px solid burlywood;
+    color:black;
+    font-size: 1.5rem;
+}
+/*promotion*/
+.promotion{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;;
+}
+img{
+    width: 25rem;
+    height: 12rem;
+    margin: auto;
+    padding: auto;
+    display: block;
+}
+.bio{
+    margin-top: 2rem;;
+    text-align: left;
+    font-size: 1rem;
+    color: black;
+}
+.gif{
+    height: 50rem;
+    width: 50rem;;
+}
+.rating-view{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 70%;
+    float: left;
+}
+.info{
+    text-align: left;
+   background-color: #6ebe90;
+}
+
+/*information*/
+.Information{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+h1{
+    text-align: center;
+}
+/*join*/
+.join-page{
+    background-image: url(../img/room.jpg);
+    backface-visibility: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 20rem;
+}
+.join{
+    margin-top: 1rem;
+    margin-left: 4rem;
+    height: 5rem;
+    width: 15rem;
+    float: right;
+    border: 2px solid pink;
+    color:black;
+    font-size: 1.5rem;
+    float: left;
+}
+h2{
+    color: darkred;
+    font-size: 3rem;
+    margin-left: 4rem;
+}
+/*footer*/
+a{
+    text-decoration-line: none;
+    color: black;
+    font-size: 1rem;
+}
+li{
+    list-style-type: none;
+}
+.footer-link{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+} 

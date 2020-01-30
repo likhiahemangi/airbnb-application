@@ -5,16 +5,17 @@ const exphbs  = require('express-handlebars');
 const app = express();
 
 //This allows express to make my static content avialable from the public
-app.use(express.static('public'))
+app.use(express.static('static'));
 
 
 
 //This tells Express to set or register Handlebars as its' Template/View Engine
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
+
 app.get("/",(req,res)=>{
 
-    res.render("home",{
+    res.render('./home',{
         title: "Home",
         headingInfo : "Home Page",
         randomContent: "Home Page"
