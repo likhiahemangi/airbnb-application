@@ -30,11 +30,11 @@ i{
  }
  .nav{
     margin-top:8rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color:black;
     text-decoration-line: none;
     text-align: right;
-    padding-left: 10rem;
+    padding-left: 8rem;
  }
  p{
      margin-top: 5rem;
@@ -47,8 +47,8 @@ i{
  /*main*/
  form{
      margin-top: 2rem;
-     padding-left: 10rem;
      display: flex;
+     margin-left: 0em;
  }
  h4{
      padding-left: 2rem;
@@ -56,7 +56,7 @@ i{
  input{
      border: 2px solid burlywood;
      margin-left: 1em;
-     padding-left: 10rem;
+     padding-left: 8rem;
  }
 select{
      margin-left: 2rem;
@@ -70,7 +70,7 @@ select{
      width: 2rem;
  }
  button{
-     margin-left: 1rem;
+     margin-left: 2rem;
     height: 5rem;
     width: 15rem;
     float: right;
@@ -92,7 +92,7 @@ img{
     display: block;
 }
 .bio{
-    margin-top: 2rem;;
+    margin-top: 2rem;
     text-align: left;
     font-size: 1rem;
     color: black;
@@ -158,4 +158,228 @@ li{
 .footer-link{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-} 
+}
+/*responsive*/
+@media screen and (min-width:300px) and (max-width: 600px) {
+    
+    /*header*/
+ header{
+    background-image: url(../img/roomfooter.jpg);
+    backface-visibility: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 25rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+ }
+ .logo{
+    margin: 2rem;
+    width: 5rem; 
+    height: 5rem;
+ }
+ .nav{
+    margin-top:8rem;
+    margin-left: 2.1em;;
+    font-size: 1.8rem;
+    color:white;
+    text-decoration-line: none;
+    text-align: right;
+    padding-right: 2rem;
+ }
+ p{
+     margin-top: 5rem;
+     margin-left: auto;
+     text-align: center;
+     font-size: 3rem;
+    color: black;
+ }
+  /*main*/
+  form{
+    margin-top: 2rem;
+    padding-left: 5rem;
+    display:inline-block ;
+}
+h4{
+    padding-left: 2rem;
+}
+input{
+    border: 2px solid burlywood;
+    margin-left: 1em;
+    padding-left: 10rem;
+}
+select{
+    margin-left: 0.5rem;
+    height: 1.2rem;
+    width: 21rem;
+    padding-left: 10rem;
+    border: 2px solid burlywood;
+}
+button{
+    margin-top: 1rem;
+  text-align: center;
+   height: 2rem;
+   width: 10rem;
+   float: right;
+   border: 2px solid burlywood;
+   color:black;
+   font-size: 1rem;
+}
+/*promotion*/
+.promotion{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  img{
+      width: 25rem;
+      height: 12rem;
+      margin: auto;
+      padding: auto;
+      display: block;
+  }
+  .bio{
+      margin-top: 2rem;;
+      text-align: left;
+      font-size: 1rem;
+      color: black;
+  }
+  .gif{
+      height: 25rem;
+      width: 25rem;;
+  }
+  .rating-view{
+      height: 4rem;
+      width: 4rem;
+      border-radius: 70%;
+      float: left;
+  }
+  .info{
+      text-align: left;
+     background-color: #6ebe90;
+  }
+  i{
+      font-size: 1em;
+      padding-left: 0.2em;
+  }
+  
+  /*information*/
+  .Information{
+      margin-top: 4rem;
+      display: grid;
+      grid-template-columns: 1fr;
+  }
+  h1{
+      text-align: center;
+  }
+  /*join*/
+.join-page{
+    background-image: url(../img/room.jpg);
+    backface-visibility: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 20rem;
+}
+.join{
+    height: 3rem;
+    width: 10rem;
+    border: 2px solid pink;
+    color:black;
+    font-size: 1rem;
+    float: left;
+    margin-right: 1rem;
+}
+h2{
+    color: darkred;
+    font-size: 1.5rem;
+    margin-left: 4rem;
+}
+/*footer*/
+a{
+    text-decoration-line: none;
+    color: black;
+    font-size: 1rem;
+    text-align: center;
+}
+li{
+    list-style-type: none;
+}
+.footer-link{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+}
+@media screen and (min-width: 800px) and  (max-width:1800px) {
+    .nav{
+        margin-top:8rem;
+        font-size: 1.5rem;
+        color:black;
+        text-decoration-line: none;
+        text-align: right;
+        padding-left: 4rem;
+     }
+     /*main*/
+form{
+    margin-top: 2rem;
+    display: flex;
+    margin-left: 0em;
+}
+h4{
+    padding-left: 2rem;
+}
+input{
+    border: 2px solid burlywood;
+    margin-left: 0.5em;
+    padding-left: 3rem;
+}
+select{
+    margin-left: 1rem;
+    height: 5rem;
+    width: 10rem;
+    padding-left: 10rem;
+    border: 2px solid burlywood;
+}
+button{
+    height: 2rem;
+    width: 2rem;
+}
+button{
+   margin-left: 1rem;
+   height: 5rem;
+   width: 15rem;
+   float: right;
+   border: 2px solid burlywood;
+   color:black;
+   font-size: 1rem;
+}
+i{
+    font-size: 1em;
+    padding-left: 2em;
+}
+/*promotion*/
+.promotion{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+.join{
+    height: 3rem;
+    width: 10rem;
+    border: 2px solid pink;
+    color:black;
+    font-size: 1rem;
+    float: left;
+    margin-right: 1rem;
+}
+}
+@media screen and (max-width:1241px) {
+    .nav{
+        margin-top:8rem;
+        font-size: 2rem;
+        text-decoration-line: none;
+        text-align: right;
+        padding-left: 1rem;
+        padding-right: 2em;
+     }
+}
