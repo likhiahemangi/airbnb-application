@@ -27,11 +27,13 @@ i{
      display: block;
  }
  p{
+     margin-top: 1em;
      text-align: center;
      font-size: 1.2rem;
      color: #a385E2;
  }
  h5{
+    margin-top: 0.5em;
     text-align: center;
     color: #f2a3f2;
  }

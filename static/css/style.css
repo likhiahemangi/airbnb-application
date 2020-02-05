@@ -123,6 +123,8 @@ img{
 }
 h1{
     text-align: center;
+    font-size: 2rem;
+    text-decoration-line: underline;
 }
 /*join*/
 .join-page{
