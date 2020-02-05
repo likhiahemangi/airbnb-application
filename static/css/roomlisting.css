@@ -52,14 +52,7 @@ li{
 @media screen and (max-width: 1200px) {
     
     /*header*/
- .nav{
-    margin-top:8rem;
-    font-size: 1rem;
-    color:black;
-    text-decoration-line: none;
-    text-align: right;
-    padding-left: 1rem;
- }
+
  i{
     margin-top: 1rem;
     padding-left: 0.2em;
@@ -81,7 +74,7 @@ li{
     display: grid;
     grid-template-columns: 1fr;
 }
-section{
+.image-display{
     display: grid;
     grid-template-columns: 1fr;
  }
@@ -101,7 +94,7 @@ section{
         padding-bottom: 2rem;
         text-align: center;
      }
-     section{
+     .image-display{
         display: grid;
         grid-template-columns: 1fr;
      }
@@ -113,11 +106,23 @@ section{
         display: block;
     }
     .nav{
+        display: block;
         margin-top:8rem;
-        font-size: 1.5rem;
-        color:black;
+        margin-left: 0.5em;;
+        font-size: 1rem;
+        color:white;
         text-decoration-line: none;
         text-align: right;
-        padding-left: 4rem;
+        padding-right: 2rem;
      }
-}
+     }
+     @media screen and (min-width:300px) and (max-width: 600px) {
+        .nav{
+            margin-top:8rem;
+            margin-left: 2em;;
+            font-size: 2rem;
+            color:white;
+            text-decoration-line: none;
+            text-align: right;
+         }
+     }

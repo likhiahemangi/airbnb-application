@@ -12,7 +12,8 @@ i{
     padding-left: 4rem;
     font-size: 1rem;
     padding-bottom: 2rem;
-    text-align: center;    
+    text-align: center; 
+    margin-left: 5rem;;   
  }
  /*header*/
  header{
@@ -72,9 +73,9 @@ select{
      width: 2rem;
  }
  button{
-     margin-left: 2rem;
-    height: 5rem;
-    width: 15rem;
+     margin-left: 5rem;
+    height: 7rem;
+    width: 18rem;
     float: right;
     border: 2px solid burlywood;
     color:black;
@@ -163,6 +164,19 @@ li{
 }
 /*responsive*/
 @media screen and (min-width:300px) and (max-width: 600px) {
+    .navigation{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    i{ 
+    margin-top: 1rem;
+    padding-left: 3rem;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    margin-left: 1rem;    
+   } 
+    
     
     /*header*/
  header{
@@ -182,8 +196,8 @@ li{
  }
  .nav{
     margin-top:8rem;
-    margin-left: 2.1em;;
-    font-size: 1.8rem;
+    margin-left: 0.5em;;
+    font-size: 1rem;
     color:white;
     text-decoration-line: none;
     text-align: right;
