@@ -7,63 +7,43 @@
     <link rel="stylesheet" type="text/css" href="/css/userregistration.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-</head>
-<body>
-    <section class="header">
-        <div>
-        <i class="fas fa-phone-alt"> 456-908-8976</i>
-        </div>
-        <div>
-        <i class="fas fa-envelope-open-text"> airbnb@gmail.com</i>
-        </div>
-        <div>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-invision"></i>
-        </div>
-    </section>
-    <header class="head">  
-        <div> 
-            <a href="roomlisting.html" class="nav">Room Listing</a>
-            <a href="#" class="nav">Product</a>
-            <a href="#" class="nav">Gallery</a>
-            <a href="#" class="nav">Solutions</a>
-            <a href="#" class="nav">Resources</a>
-            <a href="#" class="nav">Contact Us</a>
-       </div>
-    </header> 
-    <form style="border:1px solid #ccc">
+    {{#each messages}}
+
+    <div class="errors">{{this}}</div>
+
+    {{/each}}
+
+    <form style="border:1px solid #ccc" action="/sendMessage">
         <div class="container">
           <h1>Sign Up</h1>
           <p>Please fill in this form to create an account.</p>
           <hr>
           <label for="Name"><b>Name</b></label>
-          <input type="text" placeholder="Enter Name" name="Name" required>
+          <input type="text" placeholder="Enter Name" name="Name">
 
           <label for="email"><b>Address</b></label>
-          <input type="text" placeholder="Enter Address" name="Address" required>
+          <input type="text" placeholder="Enter Address" name="Address">
 
           <label for="email"><b>Postal Code</b></label>
-          <input type="text" placeholder="Enter Postal Code" name="Postal Code" required>
+          <input type="text" placeholder="Enter Postal Code" name="PostalCode">
 
           <label for="email"><b>Phone Number</b></label>
-          <input type="text" placeholder="Enter Phone Number" name="Phone Number" required>
+          <input type="text" placeholder="Enter Phone Number" name="phoneNo">
 
           <label for="email"><b>City</b></label>
-          <input type="text" placeholder="Enter City" name="City" required>
+          <input type="text" placeholder="Enter City" name="City">
 
           <label for="email"><b>State</b></label>
-          <input type="text" placeholder="Enter State" name="State" required>
+          <input type="text" placeholder="Enter State" name="State">
 
           <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
+          <input type="text" placeholder="Enter Email" name="email">
       
           <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <input type="password" placeholder="Enter Password" name="psw">
       
           <label for="psw-repeat"><b>Repeat Password</b></label>
-          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat">
       
           
           <div>

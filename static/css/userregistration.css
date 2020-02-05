@@ -4,29 +4,10 @@
 body{
     background-color: #ffffff;
 }
-/*header*/
-header{
-    height: 3rem;
+.errors{
+  color: #f44336;
 }
- .nav{
-    margin-top:8rem;
-    font-size: 2rem;
-    color:black;
-    text-decoration-line: none;
-    text-align: right;
-    padding-left: 10rem;
- }/*section*/
-.header{
-    display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
-}
-i{ 
-  margin-top: 1rem;
-  padding-left: 4rem;
-  font-size: 1rem;
-  padding-bottom: 2rem;
-  text-align: center;    
-}
+
 * {box-sizing: border-box}
 
 /* Full-width input fields */
@@ -79,6 +60,7 @@ button:hover {
 
 /* Add padding to container elements */
 .container {
+  width: 100%;
   padding: 16px;
 }
 
