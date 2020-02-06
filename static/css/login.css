@@ -11,12 +11,17 @@ input[type=text], input[type=password] {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
-
+h1{
+  text-align: center;
+  font-size: large;
+  margin: 1em;
+}
 button {
   background-color: #4CAF50;
   color: white;
   height: 3rem;
   text-align: center;
+  margin: 1rem;
 }
 
 button:hover {
@@ -27,9 +32,11 @@ button:hover {
   background-color: #f44336;
   height: 3rem;
   text-align: center;
+  margin: 1rem;
 }
 
 .container {
+  width: 100%;
   padding: 16px;
 }
 span.psw {
@@ -49,16 +56,16 @@ span.psw {
     /* padding: 16px; */
   } 
   .cancelbtn {
-    margin: 0.5em;
-    padding-bottom: 1.5em;
-    height: 2.5em;
+    width: 50%;
+    margin: 0.2em;
   }
   span.psw {
     display: block;
     float: none;
   }
   button{
-    margin-right: 0.5rem;
-    height: 2.5em;
+    width: 50%;
+    margin: 0.2em;
+
   }
 }

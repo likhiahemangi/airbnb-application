@@ -25,6 +25,7 @@ i{
     min-height: 45rem;
     display: grid;
     grid-template-columns: 1fr 3fr;
+    border-radius: 1em;
  }
  .logo{
     margin: 2rem;
@@ -51,7 +52,8 @@ i{
  form{
      margin-top: 2rem;
      display: flex;
-     margin-left: 0em;
+     margin-left: 3em;
+     margin-right: 2em;
  }
  h4{
      padding-left: 2rem;
@@ -63,7 +65,7 @@ i{
  }
 select{
      margin-left: 2rem;
-     height: 6rem;
+     height: 7rem;
      width: 10rem;
      padding-left: 10rem;
      border: 2px solid burlywood;
@@ -80,7 +82,7 @@ select{
     border: 2px solid burlywood;
     color:black;
     font-size: 1.5rem;
-}
+ }
 /*promotion*/
 .promotion{
   display: grid;
@@ -198,7 +200,7 @@ li{
  }
  .nav{
     margin-top:8rem;
-    margin-left: 0.5em;;
+    margin-left: 2.5em;;
     font-size: 1rem;
     color:white;
     text-decoration-line: none;
@@ -224,20 +226,23 @@ h4{
 input{
     border: 2px solid burlywood;
     margin-left: 1em;
-    padding-left: 10rem;
+    padding-left: 8rem;
+    width: 11rem;
+    height: 2rem;
 }
 select{
-    margin-left: 0.5rem;
-    height: 1.2rem;
-    width: 21rem;
+    margin-left: 0.7rem;
+    height: 2rem;
+    width: 19rem;
     padding-left: 10rem;
     border: 2px solid burlywood;
 }
 button{
-    margin-top: 1rem;
-  text-align: center;
+   display: block;
+   margin: 1rem;
+   text-align: center;
    height: 2rem;
-   width: 10rem;
+   width: 50%;
    float: right;
    border: 2px solid burlywood;
    color:black;

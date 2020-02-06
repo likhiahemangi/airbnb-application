@@ -25,6 +25,7 @@ i{
      margin: auto ;
      padding: auto;
      display: block;
+     border-radius: 1em;
  }
  p{
      margin-top: 1em;
@@ -107,11 +108,10 @@ li{
         display: block;
     }
     .nav{
-        display: block;
         margin-top:8rem;
         margin-left: 0.5em;;
         font-size: 1rem;
-        color:white;
+        color:black;
         text-decoration-line: none;
         text-align: right;
         padding-right: 2rem;
@@ -120,7 +120,7 @@ li{
      @media screen and (min-width:300px) and (max-width: 600px) {
         .nav{
             margin-top:8rem;
-            margin-left: 2em;;
+            margin-left: 5em;;
             font-size: 2rem;
             color:white;
             text-decoration-line: none;
