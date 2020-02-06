@@ -41,11 +41,15 @@ app.get("/userregistration",(req,res)=>{
         res.render("userregistration",{
             title: "userregistration",
             headingInfo : "User Registration Page",
-    
+    }); 
 });
+app.get("/login",(req,res)=>{
 
+  res.render("login",{
+      title: "Login page",
+      headingInfo : "Login  Page",
+   });
 });
-
 
 
 app.post("/sendMessage",(req,res)=>{
