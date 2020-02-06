@@ -6,26 +6,24 @@
     <script src="https://kit.fontawesome.com/e6cf7acf81.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="/css/login.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login </title>
+    <title>{{title}} </title>
     </head>
     <body>
-   <div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'"class="close" title="Close Modal">&times;</span>
-  <form style="border:2px solid #ccc">
+  <form method="post">
   <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" >
+    <h1>Login Here To enjoy your Tour</h1>
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname">
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" >
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw">
 
-     <div class="clearfix">
-            <button type="button" class="signupbtn">Login</button>
-            <button type="submit" class="cancelbtn">Cancle</button>
-          </div>
-      <span>Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
+    <button type="submit">Login</button>
+    <button type="button" class="cancelbtn">Cancel</button>
+    <label>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </label>
+  </div>
+</form>
 </body>
 </html>
