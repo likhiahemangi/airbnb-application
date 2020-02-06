@@ -50,8 +50,13 @@ app.get("/login",(req,res)=>{
       headingInfo : "Login  Page",
    });
 });
+app.get("/sendMessage",(req,res)=>{
 
-
+  res.render("home",{
+      title: "Sign Up Page",
+      headingInfo : "sign up Page",
+   });
+});
 app.post("/sendMessage",(req,res)=>{
 
     const errors= [];
@@ -90,15 +95,11 @@ app.post("/sendMessage",(req,res)=>{
 
   if(errors.length > 0)
   {
-    res.render("form",{
+    res.render("roomlisting",{
       messages : errors
     })
   }
-
-
 });
-
-
 app.listen(3000,()=>{
 
     console.log(`Web server is up and running`);
