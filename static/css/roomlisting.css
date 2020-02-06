@@ -15,6 +15,11 @@ i{
     padding-bottom: 2rem;
     text-align: center;    
  }
+ h3{
+    margin-top: 0.5em;
+    text-align: center;
+ }
+ .che
  .image-display{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

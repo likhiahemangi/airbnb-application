@@ -34,9 +34,11 @@ button:hover {
   text-align: center;
   margin: 1rem;
 }
-
+.link{
+  color: blue;
+}
 .container {
-  width: 100%;
+  width: 40%;
   padding: 16px;
 }
 span.psw {
