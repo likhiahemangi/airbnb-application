@@ -28,6 +28,7 @@ button:hover {
   opacity: 0.8;
 }
 .errors{
+  margin: 1rem;
   color: #f44336;
 }
 .cancelbtn {

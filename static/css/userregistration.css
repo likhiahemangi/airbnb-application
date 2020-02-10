@@ -7,6 +7,7 @@ body{
 .errors{
   color: #f44336;
   text-align: justify;
+  margin: 1rem;
 }
 
 * {box-sizing: border-box}
