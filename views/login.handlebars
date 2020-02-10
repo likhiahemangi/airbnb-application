@@ -7,9 +7,14 @@
     <link rel="stylesheet" type="text/css" href="/css/login.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{title}} </title>
+     {{#each messages}}
+
+    <div class="errors">{{this}}</div>
+
+    {{/each}} 
     </head>
     <body>
-  <form method="post">
+  <form  action="/sendLogin"method="POST">
   <div class="container">
     <h1>Login with <a href="#" class="link">Facebook</a> Either <a href="#" class="link">Google</a> </h1>
     <h1>Don't have an account? <a href="/userregistration" class="link">Sign Up Here</a></h1>

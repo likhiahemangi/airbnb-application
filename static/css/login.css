@@ -27,7 +27,9 @@ button {
 button:hover {
   opacity: 0.8;
 }
-
+.errors{
+  color: #f44336;
+}
 .cancelbtn {
   background-color: #f44336;
   height: 3rem;

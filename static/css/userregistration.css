@@ -6,6 +6,7 @@ body{
 }
 .errors{
   color: #f44336;
+  text-align: justify;
 }
 
 * {box-sizing: border-box}
