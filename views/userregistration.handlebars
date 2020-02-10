@@ -14,7 +14,7 @@
     {{/each}}
 
     <form action="/sendMessage" method="POST">
-        <div class="container">
+      <div class="container">
           <h1>Sign Up</h1>
           <hr>
           <label><b>Name</b></label>
@@ -43,33 +43,31 @@
       
           <label for="psw-repeat"><b>Repeat Password</b></label>
           <input type="password" placeholder="Repeat Password" name="psw-repeat">
-      
-          
-          <div>
-            <div class="col-50">
-          <h3>Payment here</h3>
-          <label for="cname">Name on Card</label>
-          <input type="text" id="cname" name="cardname">
-          <label for="ccnum">Credit card number/Debit Card Number</label>
-          <input type="text" id="ccnum" name="cardnumber">
-          <label for="expmonth">Exp Month</label>
-          <input type="text" id="expmonth" name="expmonth">
-          <div class="row">
-            <div class="col-50">
-              <label for="expyear">Exp Year</label>
-              <input type="text" id="expyear" name="expyear">
-            </div>
-            <div class="col-50">
-              <label for="cvv">CVV</label>
-              <input type="text" id="cvv" name="cvv">
-            </div>
-          </div>
-         </div>
-          <p class="statement">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-          <div class="clearfix">
-            <button type="button" class="cancelbtn">Cancel</button>
-            <button type="submit" class="signupbtn">SIGN UP </button>
+    <div>
+      <div class="col-50">
+        <h3>Payment here</h3>
+        <label for="cname">Name on Card</label>
+        <input type="text" id="cname" name="cardname">
+        <label for="ccnum">Credit card number/Debit Card Number</label>
+        <input type="text" id="ccnum" name="cardnumber">
+        <label for="expmonth">Exp Month</label>
+        <input type="text" id="expmonth" name="expmonth">
+      <div class="row">
+      <div class="col-50">
+        <label for="expyear">Exp Year</label>
+        <input type="text" id="expyear" name="expyear">
         </div>
-      </form>
+        <div class="col-50">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" name="cvv">
+        </div>
+      </div>
+    </div>
+      <p class="statement">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">SIGN UP </button>
+     </div>
+  </form>
 </body>
 </html>
