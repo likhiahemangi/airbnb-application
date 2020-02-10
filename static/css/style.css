@@ -27,6 +27,9 @@ i{
     grid-template-columns: 1fr 3fr;
     border-radius: 1em;
  }
+ a:active{
+     color: deeppink;
+ }
  .logo{
     margin: 2rem;
     width: 4rem; 
@@ -221,7 +224,7 @@ li{
   /*main*/
   form{
     margin-top: 2rem;
-    padding-left: 5rem;
+    padding-left: 2rem;
     display:inline-block ;
 }
 h4{
@@ -243,7 +246,7 @@ select{
 }
 button{
    display: block;
-   margin: 1rem;
+   margin: 1.5rem;
    text-align: center;
    height: 2rem;
    width: 50%;
@@ -276,8 +279,8 @@ button{
       width: 25rem;;
   }
   .rating-view{
-      height: 4rem;
-      width: 4rem;
+      height: 2rem;
+      width: 2rem;
       border-radius: 70%;
       float: left;
   }
