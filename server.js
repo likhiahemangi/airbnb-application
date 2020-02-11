@@ -108,6 +108,9 @@ app.post("/sendMessage",(req,res)=>{
        messages : errors
      })
     }
+    else{
+      res.redirect('/roomlisting');
+    }
 });
 app.post("/sendLogin",(req,res)=>{
 
