@@ -89,6 +89,10 @@ app.post("/sendMessage",(req,res)=>{
     {
      errors.push("Sorry, you must enter a phone number");
     }
+    else if(req.body.phoneNo.length<10)
+  {
+    errors.push("Sorry, Your Phone Number is INVALID ");
+  }
     if(req.body.email =="")
     {
      errors.push("Sorry, you must enter an  E-mail")
@@ -117,7 +121,7 @@ if(req.body.uname =="")
   {
     errors.push("Sorry, you must enter a Password");
   }
-  if(req.body.psw.length<4)
+  else if(req.body.psw.length<4)
   {
     errors.push("Sorry, you must enter a Password at least 8 characters ");
   }
