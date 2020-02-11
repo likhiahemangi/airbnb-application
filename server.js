@@ -117,6 +117,10 @@ if(req.body.uname =="")
   {
     errors.push("Sorry, you must enter a Password");
   }
+  if(req.body.psw.length<4)
+  {
+    errors.push("Sorry, you must enter a Password at least 8 characters ");
+  }
   if(errors.length > 0)
   {
    console.log(errors);
