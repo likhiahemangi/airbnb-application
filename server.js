@@ -132,6 +132,9 @@ if(req.body.uname =="")
      messages : errors
    })
   }
+  else{
+    res.redirect('/roomlisting');
+  }
 });
 app.listen(3000,()=>{
 

@@ -33,6 +33,7 @@ i{
      padding: auto;
      display: block;
      border-radius: 1em;
+     box-shadow: 2px 2px black;
  }
  p{
      margin-top: 1em;
