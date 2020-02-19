@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const exphbs  = require('express-handlebars');
 const bodyParser = require('body-parser')
-
+const productModel = require("./models/roomlisting");
 
 
 //This allows express to make my static content avialable from the public
@@ -34,6 +34,7 @@ app.get("/roomlisting",(req,res)=>{
     res.render("roomlisting",{
         title: "Room Listing",
         headingInfo : "Room Listing Page",
+        products : productModel.getallProducts()
     });
 });
 
