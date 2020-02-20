@@ -158,8 +158,7 @@ if(req.body.uname =="")
      messages : errors
    })
   }
-<<<<<<< HEAD
-=======
+
   else
   {
      const accountSid = 'ACfe21291fd2dcc6b18141ebe91e843c8b';
@@ -181,11 +180,10 @@ if(req.body.uname =="")
       })
 
   }
-    elif
+  elseif
     {
       res.render("userdashboard");
     }    
->>>>>>> aa783a0810dba620d717448bdc966e0540defbf2
 });
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,()=>{
