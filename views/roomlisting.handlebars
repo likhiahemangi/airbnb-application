@@ -10,165 +10,19 @@
     </header> 
     <h1> Top places to stay in Toronto</h1>
     <h4> More than 100 Places out of 5 star</h4>
-<section class="image-display">
-    <div>
-        <img src="/images/T1.jpeg">
+<div class="image-display">
         {{#each products}}
     <div>
+        <img src="{{this.image}}">
         <p>
               Title:  {{this.title}}
         </p>
-        <p>
+        <h5>
                 Description : {{this.price}}
-        </p>
-        <p>
-                Price : {{this.rating}}
-        </p>
-
-    </div>
-{{/each}}
-    </div>
-    <div>
-        <img src="/images/T2.jpeg">
-      {{#each products}}
-    <div>
-        <p>
-              Title:  {{this.title}}
-        </p>
-        <p>
-                Description : {{this.price}}
-        </p>
-        <p>
-                Price : {{this.rating}}
-        </p>
-
-    </div>
-{{/each}}
-    </div>
-    <div>
-        <img src="/images/T3.jpeg">
-          {{#each products}}
-    <div>
-        <p>
-              Title:  {{this.title}}
-        </p>
-        <p>
-                Description : {{this.price}}
-        </p>
-        <p>
-                Price : {{this.rating}}
-        </p>
-
-    </div>
-{{/each}}
-    </div>
-</section>
-<section class="image-display">
-    <div>
-        <img src="/images/T4.jpg">
-          {{#each products}}
-    <div>
-        <p>
-              Title:  {{this.title}}
-        </p>
-        <p>
-                Description : {{this.price}}
-        </p>
-        <p>
-                Price : {{this.rating}}
-        </p>
-
-    </div>
-{{/each}}
-    </div>
-    <div>
-        <img src="/images/T5.jpg">
-          {{#each products}}
-    <div>
-        <p>
-              Title:  {{this.title}}
-        </p>
-        <p>
-                Description : {{this.price}}
-        </p>
-        <p>
-                Price : {{this.rating}}
-        </p>
-
-    </div>
-{{/each}}
-    </div>
-    <div>
-        <img src="/images/T6.jpeg">
-          {{#each products}}
-    <div>
-        <p>
-              Title:  {{this.title}}
-        </p>
-        <p>
-                Description : {{this.price}}
-        </p>
-        <p>
-                Price : {{this.rating}}
-        </p>
-
-    </div>
-{{/each}}
-    </div>
-</section>
-<section class="image-display">
-    <div>
-        <img src="/images/T7.jpeg">
-          {{#each products}}
-    <div>
-        <p>
-              Title:  {{this.title}}
-        </p>
-        <p>
-                Description : {{this.price}}
-        </p>
-        <p>
-                Price : {{this.rating}}
-        </p>
-
-    </div>
-{{/each}}
-    </div>
-    <div>
-        <img src="/images/T8.jpeg">
-          {{#each products}}
-    <div>
-        <p>
-              Title:  {{this.title}}
-        </p>
-        <p>
-                Description : {{this.price}}
-        </p>
-        <p>
-                Price : {{this.rating}}
-        </p>
-
-    </div>
-{{/each}}
-    </div>
-    <div>
-        <img src="/images/T2.jpeg">
-          {{#each products}}
-    <div>
-        <p>
-              Title:  {{this.title}}
-        </p>
-        <p>
-                Description : {{this.price}}
-        </p>
-        <p>
-                Price : {{this.rating}}
-        </p>
-
-    </div>
-{{/each}}
-    </div>
-</section>
-
+        </h5>
+        <h3>4.6<span class="fa fa-star checked"></span></h3>
+</div>
+    {{/each}}
+ </div>
 </body>
 </html>

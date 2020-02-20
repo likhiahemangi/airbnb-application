@@ -18,25 +18,25 @@
           <h1>Sign Up</h1>
           <hr>
           <label><b>Name</b></label>
-          <input type="text" placeholder="Enter Name" name="FirstName" class="frst">
+          <input type="text" placeholder="Enter Name" name="FirstName" id="FirstName">
 
           <label for="email"><b>Address</b></label>
-          <input type="text" placeholder="Enter Address" name="Address">
+          <input type="text" placeholder="Enter Address" name="Address" id="Address">
 
           <label for="email"><b>Postal Code</b></label>
-          <input type="text" placeholder="Enter Postal Code" name="PostalCode">
+          <input type="text" placeholder="Enter Postal Code" name="PostalCode" id="PostalCode">
 
           <label for="email"><b>Phone Number</b></label>
-          <input type="text" placeholder="Enter Phone Number" name="phoneNo">
+          <input type="text" placeholder="Enter Phone Number" name="phoneNo" id="phoneNo">
 
           <label for="email"><b>City</b></label>
-          <input type="text" placeholder="Enter City" name="City">
+          <input type="text" placeholder="Enter City" name="City" id="City">
 
           <label for="email"><b>State</b></label>
-          <input type="text" placeholder="Enter State" name="State">
+          <input type="text" placeholder="Enter State" name="State" id="State">
 
           <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email">
+          <input type="text" placeholder="Enter Email" name="email" id="email">
       
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw">
@@ -44,30 +44,16 @@
           <label for="psw-repeat"><b>Repeat Password</b></label>
           <input type="password" placeholder="Repeat Password" name="psw-repeat">
     <div>
-      <div class="col-50">
-        <h3>Payment here</h3>
-        <label for="cname">Name on Card</label>
-        <input type="text" id="cname" name="cardname">
-        <label for="ccnum">Credit card number/Debit Card Number</label>
-        <input type="text" id="ccnum" name="cardnumber">
-        <label for="expmonth">Exp Month</label>
-        <input type="text" id="expmonth" name="expmonth">
-      <div class="row">
-      <div class="col-50">
-        <label for="expyear">Exp Year</label>
-        <input type="text" id="expyear" name="expyear">
-        </div>
-        <div class="col-50">
-          <label for="cvv">CVV</label>
-          <input type="text" id="cvv" name="cvv">
-        </div>
-      </div>
-    </div>
       <p class="statement">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">SIGN UP </button>
+      <button type="submit" class="signupbtn" id="signup" onclick="place()">SIGN UP </button>
      </div>
   </form>
+  <script src="../static/userdash.js">
+     
+
+  </script>
 </body>
+
 </html>
