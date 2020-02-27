@@ -45,6 +45,13 @@ app.get("/userregistration",(req,res)=>{
             headingInfo : "User Registration Page",
     }); 
 });
+app.get("/userdashboard",(req,res)=>{
+
+  res.render("userdashboard",{
+      title: "User Dashboard",
+      headingInfo : "User Dashboard" 
+}); 
+});
 app.get("/login",(req,res)=>{
 
   res.render("login",{

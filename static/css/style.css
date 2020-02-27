@@ -104,6 +104,7 @@ img{
     text-align: left;
     font-size: 1rem;
     color: black;
+    padding: 2em;
 }
 .gif{
     height: 50rem;
@@ -122,7 +123,7 @@ img{
 
 /*information*/
 .Information{
-    margin-top: 4rem;
+    margin: 4em 4em;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -150,7 +151,7 @@ h1{
     height: 5rem;
     width: 15rem;
     float: right;
-    border: 2px solid pink;
+    border: 2px solid burlywood;
     color:black;
     font-size: 1.5rem;
     float: left;
