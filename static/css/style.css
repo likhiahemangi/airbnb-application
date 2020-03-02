@@ -15,6 +15,12 @@ i{
     text-align: center; 
     margin-left: 5rem;;   
  }
+.room{
+    text-align: left;
+    font-size: 2rem;
+    text-shadow: 2px 2px burlywood;
+    color:black;
+}
  /*header*/
  header{
     background-image: url(../img/roomfooter.jpg);
@@ -92,7 +98,7 @@ select{
   grid-template-columns: 1fr 1fr;
   margin-top: 2rem;;
 }
-img{
+.promoimg{
     width: 25rem;
     height: 12rem;
     margin: auto;
@@ -100,7 +106,7 @@ img{
     display: block;
 }
 .bio{
-    margin-top: 2rem;
+    margin-top: 1rem;
     text-align: left;
     font-size: 1rem;
     color: black;
@@ -276,7 +282,7 @@ button{
     display: grid;
     grid-template-columns: 1fr;
   }
-  img{
+  .promoimg{
       width: 25rem;
       height: 12rem;
       margin: auto;

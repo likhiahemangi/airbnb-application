@@ -26,6 +26,7 @@ app.get("/",(req,res)=>{
 app.get("/home", (req,res) =>{
     res.render('home',{
         title:"Home",
+        products : productModel.getallProducts()
     });
 });
 
@@ -124,7 +125,7 @@ app.post("/sendMessage",(req,res)=>{
     
      client.messages
       .create({
-         body: `${req.body.FirstName} ${req.body.Address} City :${req.body.City}`,
+         body: `${req.body.FirstName} Address : ${req.body.Address} City :${req.body.City}`,
          from: '+16036051628',
          to: `${req.body.phoneNo}`
        })
