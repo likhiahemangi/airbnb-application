@@ -46,15 +46,18 @@ i{
     color: #f2a3f2;
  }
  /*footer*/
-a{
+ a{
     text-decoration-line: none;
-    color: black;
-    font-size: 1rem;
+    color: wheat;
+    font-size: 1.2rem;
 }
 li{
     list-style-type: none;
 }
 .footer-link{
+    text-shadow: 2px 2px black;
+    margin-top: 0.5rem;
+    background-color: lightslategray;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
@@ -134,4 +137,10 @@ li{
             text-decoration-line: none;
             text-align: right;
          }
+         a{
+            text-decoration-line: none;
+            color: white;
+            font-size: 1rem;
+            text-align: center;
+        }
      }

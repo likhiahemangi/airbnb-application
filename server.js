@@ -124,23 +124,20 @@ app.post("/sendMessage",(req,res)=>{
     
      client.messages
       .create({
-         body: `${req.body.FirstName} ${req.body.Address} Message :${req.body.City}`,
+         body: `${req.body.FirstName} ${req.body.Address} City :${req.body.City}`,
          from: '+16036051628',
          to: `${req.body.phoneNo}`
        })
       .then(message => {
         console.log(message.sid);
-        res.render("sendMessage");
+        res.render("userdashboard");
       })
       .catch((err)=>{
           console.log(`Error ${err}`);
       })
 
   }
-    elif
-    {
-      res.render("userdashboard");
-    }    
+ 
 });
 app.post("/sendLogin",(req,res)=>{
 
@@ -165,32 +162,6 @@ if(req.body.uname =="")
      messages : errors
    })
   }
-
-  else
-  {
-     const accountSid = 'ACfe21291fd2dcc6b18141ebe91e843c8b';
-     const authToken = '9d3a31b404673fdcd9b3b9ae95427a65';
-     const client = require('twilio')(accountSid, authToken);
-    
-     client.messages
-      .create({
-         body: `${req.body.FirstName} ${req.body.Address} Message :${req.body.City}`,
-         from: '+16036051628',
-         to: `${req.body.phoneNo}`
-       })
-      .then(message => {
-        console.log(message.sid);
-        res.render("sendMessage");
-      })
-      .catch((err)=>{
-          console.log(`Error ${err}`);
-      })
-
-  }
-  elseif
-    {
-      res.render("userdashboard");
-    }    
 });
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,()=>{

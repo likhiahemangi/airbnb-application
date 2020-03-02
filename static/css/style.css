@@ -119,6 +119,8 @@ img{
 .info{
     text-align: left;
    background-color: #6ebe90;
+    color: black;
+    font-size: 2rem;
 }
 
 /*information*/
@@ -127,10 +129,14 @@ img{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-h1{
+.title{
+    color: burlywood;
     text-align: center;
     font-size: 2rem;
     text-decoration-line: underline;
+}
+.title:hover{
+      background-color: black;
 }
 .checked {
     color: orange;
@@ -156,6 +162,10 @@ h1{
     font-size: 1.5rem;
     float: left;
 }
+.join:hover{
+    color:black;
+    background-color: burlywood;
+}
 h2{
     color: darkred;
     font-size: 3rem;
@@ -164,13 +174,17 @@ h2{
 /*footer*/
 a{
     text-decoration-line: none;
-    color: black;
-    font-size: 1rem;
+    color: wheat;
+    font-size: 1.2rem;
 }
 li{
     list-style-type: none;
+    padding: 1rem;
 }
 .footer-link{
+    text-shadow: 2px 2px black;
+    margin-top: 0.5rem;
+    background-color: lightslategray;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
@@ -269,11 +283,15 @@ button{
       padding: auto;
       display: block;
   }
+  .title{
+      font-size: 1.5rem;
+  }
   .bio{
       margin-top: 2rem;;
       text-align: left;
       font-size: 1rem;
       color: black;
+      padding: 0.2em;
   }
   .gif{
       height: 25rem;
@@ -286,7 +304,7 @@ button{
       float: left;
   }
   .info{
-      text-align: left;
+     text-align: left;
      background-color: #6ebe90;
   }
   i{
@@ -315,7 +333,7 @@ button{
 .join{
     height: 3rem;
     width: 10rem;
-    border: 2px solid pink;
+    border: 2px solid burlywood;
     color:black;
     font-size: 1rem;
     float: left;
@@ -329,12 +347,13 @@ h2{
 /*footer*/
 a{
     text-decoration-line: none;
-    color: black;
+    color: white;
     font-size: 1rem;
     text-align: center;
 }
 li{
     list-style-type: none;
+    padding: 0.4rem;
 }
 .footer-link{
     display: grid;
