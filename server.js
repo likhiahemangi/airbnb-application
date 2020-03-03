@@ -3,7 +3,6 @@ const app = express();
 const exphbs  = require('express-handlebars');
 const bodyParser = require('body-parser')
 const productModel = require("./models/roomlisting");
-const nodemailer =require('nodemailer');
 require('dotenv').config({path:"./config.env"})
 
 //This allows express to make my static content avialable from the public
@@ -70,13 +69,6 @@ app.get("/sendMessage",(req,res)=>{
    });
 });
 
-const transporter =nodemailer.createTransport({
-  service : 'gmail',
-  auth:{
-    user : 'likhiahemangi@gmail.com',
-    pass: '2712hemu@'
-  }
-});
 app.post("/sendMessage",(req,res)=>{
 
     const errors= [];
@@ -129,18 +121,21 @@ app.post("/sendMessage",(req,res)=>{
      const accountSid = process.env.TWILIO_AUTHID;
      const authToken = process.env.TWILIO_TOKEN;
      const client = require('twilio')(accountSid, authToken);
-     const mailOptions={
-       from : 'likhiahemangi@gmail.com',
-       to:    `${req.body.email}`,
-       text : 'Welcome to AIRBNB',
-     };
-     transporter.sendMail(mailOptions, function(error,info){
-       if(error){
-         console.log(error);
-       }else{
-         console.log('Email sent:' +info.response);
-       }
-     });
+     const sgMail = require('@sendgrid/mail');
+      sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+      const msg = {
+        to: 'likhiahemangi@gmail.com',
+        from: 'test@example.com',
+        subject: 'Welcome to Airbnb',
+        text: 'and easy to do anywhere, even with Airbnb',
+      };
+      sgMail.send(msg)
+      .then(()=>{
+        res.redirect("userdashboard");
+      })
+      .catch((err)=>{
+        console.log(err);
+      }),
      
      client.messages
       .create({
@@ -152,10 +147,7 @@ app.post("/sendMessage",(req,res)=>{
         console.log(message.sid);
         res.render("userdashboard");
       })
-      .catch((err)=>{
-          console.log(`Error ${err}`);
-      })
-
+    
   }
  
 });
