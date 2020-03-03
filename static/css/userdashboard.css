@@ -4,7 +4,8 @@
 body{
     background-color: #dcE8f4;
 }
-h1{
+.name{
+    text-align: center;
     background-color: burlywood;
     color: black;
     text-decoration-line: underline;
@@ -29,6 +30,9 @@ h5{
     text-shadow: 2px 2px burlywood;
 }
 .profilephoto{
+    margin: auto;
+    padding: auto;
+    display: block;
     height: 10rem;
     width: 12rem;
 }
@@ -89,7 +93,7 @@ h5{
         display: grid;
         grid-template-columns: 1fr;
     }
-    h1{
+    .name{
         font-size: 1rem;
     }
     .profile-dashboard{
