@@ -4,6 +4,7 @@ const exphbs  = require('express-handlebars');
 const bodyParser = require('body-parser')
 const productModel = require("./models/roomlisting");
 const nodemailer =require('nodemailer');
+require('dotenv').config({path:"./config.env"})
 
 //This allows express to make my static content avialable from the public
 app.use(express.static('static'));
@@ -125,8 +126,8 @@ app.post("/sendMessage",(req,res)=>{
     }
     else
   {
-     const accountSid = 'ACfe21291fd2dcc6b18141ebe91e843c8b';
-     const authToken = '9d3a31b404673fdcd9b3b9ae95427a65';
+     const accountSid = process.env.TWILIO_AUTHID;
+     const authToken = process.env.TWILIO_TOKEN;
      const client = require('twilio')(accountSid, authToken);
      const mailOptions={
        from : 'likhiahemangi@gmail.com',
