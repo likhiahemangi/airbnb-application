@@ -1,0 +1,51 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const taskSchema = new Schema({
+    
+    FirstName:
+    {
+        type:String,
+        required:true
+    },
+    Address:
+    {
+        type:String,
+        required:true    
+    },
+    PostalCode:
+    {
+        type:String,
+        required:true    
+    },
+    phoneNo:
+    {
+        type:String,
+        required:true    
+    },
+    City:
+    {
+        type:String,
+        required:true    
+    },
+    State:
+    {
+        type:String,
+        required:true    
+    },
+    email:
+    {
+        type:String,
+        required:true    
+    },
+    psw:
+    {
+        type:String,
+        required:true    
+    }
+
+});
+const taskmodel = mongoose.model('AirBnB' , taskSchema);
+module.exports = taskmodel;
+
+

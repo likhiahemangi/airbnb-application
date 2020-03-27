@@ -4,10 +4,19 @@ const exphbs  = require('express-handlebars');
 const bodyParser = require('body-parser')
 const productModel = require("./models/roomlisting");
 require('dotenv').config({path:"./config.env"})
+const taskmodel = require("./models/task");
 
 //This allows express to make my static content avialable from the public
 app.use(express.static('static'));
 app.use(bodyParser.urlencoded({extended: false}))
+
+const mongoose = require('mongoose');
+mongoose.connect(process.env.mongo_db_connection_string, {useNewUrlParser: true, useUnifiedTopology: true});
+ .then(()=>{
+  console.log("connect to moongoose databade");
+})
+ .catch(err=>console.log(`error in database : ${err}`));
+
 
 
 //This tells Express to set or register Handlebars as its' Template/View Engine
@@ -46,13 +55,31 @@ app.get("/userregistration",(req,res)=>{
             headingInfo : "User Registration Page",
     }); 
 });
+
 app.get("/userdashboard",(req,res)=>{
 
-  res.render("userdashboard",{
-      title: "User Dashboard",
-      headingInfo : "User Dashboard" 
+       taskmodel.find()
+       .then((store)=>{
+
+        const filtertask = store.map(result=>{
+
+          return{
+
+             FirstName : result.FirstName,
+             Address: result.Address,
+              PostalCode: result.PostalCode,
+             phoneNo: result.phoneNo,
+             email: result.email
+
+          }
+        });
+        res.redirect("userdashboard",{
+          data: filtertask
+   })
+    .catch(err=>console.log(`error in pulling database : ${err}`));
+
 }); 
-});
+
 app.get("/login",(req,res)=>{
 
   res.render("login",{
@@ -149,7 +176,25 @@ app.post("/sendMessage",(req,res)=>{
       })
     
   }
- 
+ ifelse
+ {
+  const newUser = {
+    FirstName: req.body.FirstName,
+    Address: req.body.Address,
+    PostalCode: req.body.PostalCode,
+    phoneNo: req.body.phoneNo,
+    City: req.body.City,
+    email: req.body.email,
+    psw: req.body.psw,
+  }
+ const task = new taskmodel(newUser);
+ task.save()
+ .then(()=>{
+     res.redirect("userdashboard");
+})
+ .catch(err=>console.log(`error in database : ${err}`));
+
+}
 });
 app.post("/sendLogin",(req,res)=>{
 
@@ -180,3 +225,4 @@ app.listen(PORT,()=>{
 
     console.log(`Web server is up and running`);
 })
+

@@ -1,6 +1,6 @@
-const express = require("express");
-var router=express.router()
-const productModel = require("./models/roomlisting");
+/*const express = require("express");
+var router=express.Router()
+const productModel = require("../models/roomlisting");
 router.get("/roomlisting",(req,res)=>{
 
     res.render("roomlisting",{
@@ -9,4 +9,4 @@ router.get("/roomlisting",(req,res)=>{
         products : productModel.getallProducts()
     });
 });
-module.exports=router;
+module.exports=router;*/

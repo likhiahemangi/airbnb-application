@@ -8,19 +8,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{title}}</title>
   <body>
-      <h1 class="name">WELCOME TO AIRBNB Arifa Khan</h1>
+    {{#each data}}
+      <h1 class="name">WELCOME TO AIRBNB {{this.FirstName}}</h1>
     <section class="profile-dashboard">
     <div>
       <img src="../img/girl dashboard.jpg" alt="dashboard" class="profilephoto">
       <a href="#" class="profile">Edit Profile</a>
     </div>
     <div>
-      <h4>Location : - <span>Toronto,ON</span></h4>
-      <h4>Languages : - <span>English,French</span></h4>
-      <h4>Email : - <span>Arifakhan@yahoo.com</span></h4>
-      <h4>Phone Number : - <span>456-098-7656</span></h4>
-      <h4>Birth date : - <span>12-08-1996</span></h4>
+      <h4>Address : - <span>{{this.Address}}</span></h4>
+      <h4>Postal Code : - <span>{{this.PostalCode}}</span></h4>
+      <h4>Email : - <span>{{this.email}}</span></h4>
+      <h4>Phone Number : - <span>{{this.phoneNo}}</span></h4>
     </div>
+    {{#each}}
    </section>
       <h5> Your Places</h5>   
       <section class="Places">
