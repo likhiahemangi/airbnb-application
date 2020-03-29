@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/admin.css">
+    <script src="https://kit.fontawesome.com/e6cf7acf81.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+  </head>
+   
+  <body>
+       <div>
+         <a href="/admin" class="nav1">Add Task</a>
+          <a href="/adminedit" class="nav1">Update Task</a>
+           <a href="/home" class="linklogout" >Logout</a>   
+       </div>
+       <div class="table">
+           <h2 class="hema">Welcome Hemangi</h2>
+    <form method="POST" class="adminform" action="/SenddataAdmin">
+
+        <label class="l">Title</label>
+        <input type="text" name="title" id="title">
+
+        <label class="l">Description</label>
+        <input type="text" id="description" name="description">
+
+        <label class="l">Price per Night</label>
+        <input type="text" name="Price" id="Price">
+
+        <label class="l">Room Location</label>
+         <input type="text" name="priority" id="priority">
+
+        <label class="l">Status</label>
+         <input type="text" name="status" id="Price">
+
+        <label class="l">Upload an image</label> 
+         <input type="file" name="image" id="image" class="uploadimage" >
+
+         <button type="submit" class="task" id="task add" >Add Task </button>
+       </form>
+    </div>
+   
+  </body>
+  </html>

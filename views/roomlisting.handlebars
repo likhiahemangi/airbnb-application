@@ -7,16 +7,26 @@
     <script src="https://kit.fontawesome.com/e6cf7acf81.js" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{title}}</title>
-    </header> 
+    <div class="filter">
+    <label>Location</label>
+    <ul>
+          <li><input type="checkbox"  id="E">Etobicoke</li>
+          <li><input type="checkbox"  id="D"> DownTown</li>
+          <li><input type="checkbox"  id="M">Markham</li>
+    </ul>
+    </div>
     <h1> Top places to stay in Toronto</h1>
     <h4> More than 100 Places out of 5 star</h4>
 <div class="image-display">
         {{#each products}}
     <div>
         <img src="{{this.image}}">
-        <p>
+        <h2>
               Title:  {{this.title}}
-        </p>
+        </h2>
+         <h3>
+              Location:  {{this.location}}
+        </h3>
         <h5>
                 Description : {{this.price}}
         </h5>

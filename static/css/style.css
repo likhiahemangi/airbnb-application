@@ -1,7 +1,32 @@
 *{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }/*section*/
-
+/*room*/
+.image-display{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+ }
+ img{
+    height: 15rem;
+    width: 24rem;
+    margin: auto ;
+    padding: auto;
+    display: block;
+    border-radius: 1em;
+    box-shadow: 1px 1px rgb(218, 92, 92);
+}
+.room{
+    text-align: center;
+    margin-left: 1rem;
+}
+h5{margin-top: 0.5em;
+    text-align: center;
+    color: blue;
+}
+h3{
+    margin-top: 0.5em;
+    text-align: center;
+ }
 .navigation{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -29,8 +54,6 @@ i{
     background-repeat: no-repeat;
     background-position: center center;
     min-height: 45rem;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
     border-radius: 1em;
  }
  a:active{
@@ -58,7 +81,7 @@ i{
  }
 
  /*main*/
- form{
+ .mainform{
      margin-top: 2rem;
      display: flex;
      margin-left: 3em;
@@ -67,7 +90,7 @@ i{
  h4{
      padding-left: 2rem;
  }
- input{
+ .maininput{
      border: 2px solid burlywood;
      margin-left: 1em;
      padding-left: 8rem;
@@ -230,7 +253,7 @@ li{
     margin-top:8rem;
     margin-left: 2.5em;;
     font-size: 1rem;
-    color:white;
+    color:black;
     text-decoration-line: none;
     text-align: right;
     padding-left: 2em;
@@ -276,6 +299,7 @@ button{
    color:black;
    font-size: 1rem;
 }
+
 /*promotion*/
 .promotion{
     margin-top: 2rem;

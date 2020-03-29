@@ -1,0 +1,68 @@
+
+.adminform{
+    margin: 0.2rem;
+    padding:1rem;
+    display:block;
+}
+.nav1{
+   color:black;
+   text-decoration-line: none;
+   padding-left: 1rem;
+}
+input{
+    margin-top: 1rem;
+    width:80%;
+    height: 2rem;
+}
+.hema{
+    color: rgb(156, 152, 146);
+    text-shadow: 2px 2px black;
+    text-align: center;
+    font-size: 2rem;
+    text-align: left;
+    margin-left: 1rem;
+}
+.uploadimage{
+    padding-top: 0.6rem;
+    height:2rem;
+}
+.linklogout{
+     color: black;
+     border: 2px solid black;
+     padding: 1rem;
+     float: right;
+     margin-right: 4rem;
+}
+.table{
+    margin-top: 8rem;
+}
+.l{
+    margin-top: 1rem;
+    color: black;
+    font-size: 1rem;
+    margin-left: 1rem;
+    display: block;
+    font-weight: bolder;
+}
+option{
+    text-align: center;
+    font-size: 1rem;
+}
+.task{
+    float: left;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    background-color: blanchedalmond;
+    margin-bottom: 5rem;
+    height: 3rem;
+    margin-top: 1rem;
+}
+.nav , .navigation{
+    visibility: hidden;
+    display: none;
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+}

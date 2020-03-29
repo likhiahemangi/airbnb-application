@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/adminedit.css">
+    <script src="https://kit.fontawesome.com/e6cf7acf81.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+  </head>
+  </html>
+       <div>
+           <a href="/admin" class="nav1">Add Task</a>
+          <a href="#" class="nav1">Update Task</a>
+           <a href="/home" class="linklogout" >Logout</a>   
+       </div>
+<section class="tasks-container">
+   
+
+     <form method="POST">
+
+
+    <table border="1" style="text-align: center;" class="table">
+        <thead>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Room Location</th>
+                <th>Status</th>
+        </thead>
+        <tbody>
+            {{#each admindata}}
+                <tr>
+                   <td>
+                        <a href="/admin/{{this.id}}" class="task-title">{{this.title}}</a>
+                   </td>
+                   <td>
+                       <span>{{this.description}}</span>
+                      
+                   </td>
+                   <td>
+                        <span>{{this.Price}}</span>
+                   </td>
+                   <td>
+                       <span>{{this.priority}} </span>
+                   </td>
+                   <td>
+                       <span>{{this.status}} </span>
+                   </td>
+                   <td>
+                        <a href="/adminupdate/{{this.id}}" class="edit-delete-button">Edit</a>
+                        <a href="/adminupdate/{{this.id}}?method=DELETE" class="edit-delete-button">Delete</a>
+                   </td> 
+                </tr>
+            {{/each}}
+            </tbody>
+    </table>
+ 
+</section>

@@ -1,0 +1,34 @@
+.tasks-container{
+    margin-top:1rem;
+    
+}
+.table{
+   margin: 5rem 17rem;
+}
+.nav{
+    visibility: hidden;
+    display: none;
+}
+.nav1{
+    color:black;
+    text-decoration-line: none;
+    padding-left: 1rem;
+ }
+ .linklogout{
+    color: black;
+    border: 2px solid black;
+    padding: 1rem;
+    float: right;
+    margin-right: 4rem;
+}
+th{
+    padding:1rem;
+    color: blue;
+}
+td{
+    padding:1rem;
+}
+.edit-delete-button,.task-title{
+    color: brown;
+    text-decoration-line: none;
+}

@@ -1,13 +1,19 @@
 <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/roomlisting.css">
 
 
+<header class="head">  
+        <div>
+            <img src="../img/logo.png" class="logo">
+    </div> 
+       
+ </header> 
+    
     <main>
-         <form>
+         <form class="mainform"
             <h4>Arrival Date</h4>
-            <input type="datetime-local" placeholder="2019,May 5th">
+            <input type="datetime-local" placeholder="2019,May 5th" class="maininput">
             <h4>Departure Date</h4>
-            <input type="datetime-local" placeholder="2019,May 5th">
+            <input type="datetime-local" placeholder="2019,May 5th" class="maininput">
             <h4>Room</h4>
             <select>
                 <option value="volvo">1</option>
@@ -17,9 +23,9 @@
                 <option value="fiat">5</option>
             </select>
             <h4>Adults</h4>
-            <input type="text">
+            <input type="text" class="maininput">
             <h4>Budget</h4>
-            <input type="text">
+            <input type="text" class="maininput">
             <button>Check Availbility</button>
           </form>
     </main>
@@ -42,14 +48,14 @@
             <span class="fa fa-star checked"><span class="fa fa-star checked"><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
         </div>
     </section>
-    <h3 class="room">Feactured Section</h3>
+    <h1 class="room">Feactured Section</h1>
     <div class="image-display">
         {{#each products}}
     <div>
         <img src="{{this.image}}">
-        <p>
+        <h3>
               Title:  {{this.title}}
-        </p>
+        </h3>
         <h5>
                 Description : {{this.price}}
         </h5>
