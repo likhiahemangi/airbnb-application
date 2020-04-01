@@ -1,4 +1,6 @@
-.tasks-container{
+body{
+    background-color: #E6E6FA;
+}.tasks-container{
     margin-top:1rem;
     
 }
@@ -31,4 +33,35 @@ td{
 .edit-delete-button,.task-title{
     color: brown;
     text-decoration-line: none;
+}
+@media screen and (min-width:300px) and (max-width: 700px){
+    .navigation{
+        visibility: hidden;
+        display: none;
+    }
+    .table{
+        margin: 5rem 2rem;
+     }
+     th{
+        padding:0.5rem;
+        color: blue;
+    }
+    td{
+        padding:0.5rem;
+    }
+}
+@media screen and (max-width: 1400px) and (min-width: 700px){
+    .table{
+        margin: 5rem 1rem;
+     }
+     .navigation{
+        visibility: hidden;
+        display: none;
+    }
+    .nav1{
+        margin-top: 3rem;
+        color:black;
+        text-decoration-line: none;
+        padding-left: 1rem;
+     }
 }

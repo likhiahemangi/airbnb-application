@@ -313,12 +313,13 @@ if(req.body.uname =="")
     res.redirect("roomlisting");
   }
 });
-app.get("/adminupdate/:title",(req,res)=>{
+app.get("/adminupdate/:id",(req,res)=>{
 
-  adminmodel.findById(req.params.title)
+  adminmodel.findById(req.params._id)
   .then((task)=>{
-      const{title,description,Price,priority,status} = task;
+      const{_id,title,description,Price,priority,status} = task;
       res.render("adminupdate",{
+            _id,
             title, 
             description,
             Price,
@@ -329,7 +330,7 @@ app.get("/adminupdate/:title",(req,res)=>{
   .catch(err=>console.log(`error in pulling database : ${err}`));
 
 });
-app.put("/update/:title",(req,res)=>{
+app.put("/update/:id",(req,res)=>{
     
   const useradmin = {
         title : req.body.title,
@@ -339,7 +340,7 @@ app.put("/update/:title",(req,res)=>{
         status : req.body.status,
          image : req.body.image,
   } 
-       adminmodel.updateOne({_id:req.params.title},useradmin)
+       adminmodel.updateOne({_id:req.params.id},useradmin)
        .then(()=>{
              res.redirect("adminedit");
        })

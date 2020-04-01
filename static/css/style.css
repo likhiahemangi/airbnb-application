@@ -1,7 +1,7 @@
 *{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}/*section*/
-/*room*/
+}
+
 .image-display{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -34,7 +34,7 @@ h3{
 
 i{ 
     margin-top: 1rem;
-    padding-left: 4rem;
+    padding-left: 2rem;
     font-size: 1rem;
     padding-bottom: 2rem;
     text-align: center; 
@@ -218,10 +218,13 @@ li{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 /*responsive*/
-@media screen and (min-width:300px) and (max-width: 600px) {
+@media screen and (min-width:300px) and (max-width: 690px) {
     .navigation{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        text-align: center;
+        background-color: #6ebe90;
+        margin-bottom: 1rem;
     }
     i{ 
     margin-top: 1rem;
@@ -235,56 +238,40 @@ li{
     
     /*header*/
  header{
-    background-image: url(../img/roomfooter.jpg);
-    backface-visibility: inherit;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    min-height: 25rem;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+   visibility: hidden;
+   display: none;
  }
- .logo{
-    margin: 2rem;
-    width: 5rem; 
-    height: 5rem;
- }
+ 
  .nav{
-    margin-top:8rem;
-    margin-left: 2.5em;;
+    display: inline;
     font-size: 1rem;
-    color:black;
-    text-decoration-line: none;
-    text-align: right;
-    padding-left: 2em;
- }
- p{
-     margin-top: 5rem;
-     margin-left: auto;
-     text-align: center;
-     font-size: 3rem;
-    color: black;
- }
-  /*main*/
-  form{
-    margin-top: 2rem;
+    margin-left: 1rem;
     padding-left: 2rem;
+    font-weight: bold;
+
+ }
+
+  /*main*/
+  .mainform{
+    margin-top: 2rem;
+    padding-left: 0;
     display:inline-block ;
 }
 h4{
     padding-left: 2rem;
 }
-input{
+.maininput{
     border: 2px solid burlywood;
-    margin-left: 1em;
-    padding-left: 8rem;
+    margin-left: auto;
+    padding-left: 2rem;
     width: 11rem;
     height: 2rem;
+    margin-left: 4rem;
 }
 select{
-    margin-left: 0.7rem;
+    margin-left: 4rem;
     height: 2rem;
-    width: 19rem;
+    width: 13rem;
     padding-left: 10rem;
     border: 2px solid burlywood;
 }
@@ -307,8 +294,8 @@ button{
     grid-template-columns: 1fr;
   }
   .promoimg{
-      width: 25rem;
-      height: 12rem;
+      width: 15rem;
+      height: 10rem;
       margin: auto;
       padding: auto;
       display: block;
@@ -322,10 +309,11 @@ button{
       font-size: 1rem;
       color: black;
       padding: 0.2em;
+      text-align: justify;
   }
   .gif{
-      height: 25rem;
-      width: 25rem;;
+      height: 15rem;
+      width: 20rem;;
   }
   .rating-view{
       height: 2rem;
@@ -336,12 +324,25 @@ button{
   .info{
      text-align: left;
      background-color: #6ebe90;
+     font-size: 1rem;
   }
   i{
       font-size: 1em;
       padding-left: 0.2em;
   }
-  
+  .image-display{
+    display: grid;
+    grid-template-columns: 1fr ;
+ }
+ img{
+    height: 15rem;
+    width: 20rem;
+    margin: auto ;
+    padding: auto;
+    display: block;
+    border-radius: 1em;
+    box-shadow: 1px 1px rgb(218, 92, 92);
+}
   /*information*/
   .Information{
       margin-top: 4rem;
@@ -389,8 +390,8 @@ li{
     display: grid;
     grid-template-columns: 1fr;
 }
-}
-@media screen and (min-width: 800px) and  (max-width:1800px) {
+} 
+@media screen and (max-width: 1400px) and (min-width: 700px){ 
     .nav{
         margin-top:8rem;
         font-size: 1.5rem;
@@ -399,49 +400,35 @@ li{
         text-align: right;
         padding-left: 4rem;
      }
-     /*main*/
-form{
-    margin-top: 2rem;
-    display: flex;
-    margin-left: 0em;
-}
-h4{
-    padding-left: 2rem;
-}
-input{
-    border: 2px solid burlywood;
-    margin-left: 0.5em;
-    padding-left: 3rem;
-}
-select{
-    margin-left: 1rem;
-    height: 5rem;
-    width: 10rem;
-    padding-left: 10rem;
-    border: 2px solid burlywood;
-}
-button{
-    height: 2rem;
-    width: 2rem;
-}
-button{
-   margin-left: 1rem;
-   height: 5rem;
-   width: 15rem;
-   float: right;
-   border: 2px solid burlywood;
-   color:black;
-   font-size: 1rem;
-}
-i{
-    font-size: 1em;
-    padding-left: 2em;
-}
+    .image-display{
+      display: grid;
+      grid-template-columns: 1fr ;
+   }
+   img{
+      height: 20rem;
+      width: 30rem;
+      margin: auto ;
+      padding: auto;
+      display: block;
+      border-radius: 1em;
+      box-shadow: 1px 1px rgb(218, 92, 92);
+  }
 /*promotion*/
 .promotion{
     margin-top: 2rem;
     display: grid;
     grid-template-columns: 1fr;
+  }
+  .tile{
+      text-align: left;
+  }
+  .gif{
+      visibility: hidden;
+      display: none;
+  }
+  .bio{
+      font-size: 1rem;
+      text-align: justify;
   }
 .join{
     height: 3rem;
@@ -452,14 +439,42 @@ i{
     float: left;
     margin-right: 1rem;
 }
+
+ 
+  /*main*/
+  .mainform{
+    margin-top: 2rem;
+    margin-left:12rem;
+    padding-left: 0;
+    display:inline-block ;
 }
-@media screen and (max-width:1241px) {
-    .nav{
-        margin-top:8rem;
-        font-size: 2rem;
-        text-decoration-line: none;
-        text-align: right;
-        padding-left: 1rem;
-        padding-right: 2em;
-     }
+h4{
+    padding-left: 2rem;
+}
+.maininput{
+    border: 2px solid burlywood;
+    margin-left: auto;
+    padding-left: 2rem;
+    width: 11rem;
+    height: 2rem;
+    margin-left: 4rem;
+}
+select{
+    margin-left: 4rem;
+    height: 2rem;
+    width: 13rem;
+    padding-left: 10rem;
+    border: 2px solid burlywood;
+}
+button{
+   display: block;
+   margin: 1.5rem;
+   text-align: center;
+   height: 2rem;
+   width: 50%;
+   float: right;
+   border: 2px solid burlywood;
+   color:black;
+   font-size: 1rem;
+}
 }

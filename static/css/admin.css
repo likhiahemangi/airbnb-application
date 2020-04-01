@@ -1,4 +1,6 @@
-
+body{
+    background-color: #E6E6FA;
+}
 .adminform{
     margin: 0.2rem;
     padding:1rem;
@@ -6,8 +8,14 @@
 }
 .nav1{
    color:black;
-   text-decoration-line: none;
+   text-decoration-line: underline;
    padding-left: 1rem;
+   margin-left: 2rem;
+   margin-top: 2rem;
+}
+.nav1:hover{
+    color: deeppink;
+    text-decoration-line: none;
 }
 input{
     margin-top: 1rem;
@@ -15,7 +23,7 @@ input{
     height: 2rem;
 }
 .hema{
-    color: rgb(156, 152, 146);
+    color:#D37093;
     text-shadow: 2px 2px black;
     text-align: center;
     font-size: 2rem;
@@ -65,4 +73,22 @@ option{
 body{
     display: grid;
     grid-template-columns: 1fr;
+}
+@media screen and (min-width:300px) and (max-width: 700px){
+    .linklogout{
+        margin-top: 2rem;
+        color: black;
+        border: 2px solid black;
+        padding: 1rem;
+        float: right;
+        margin-right: 4rem;
+   }
+   .hema{
+    color:#D37093;
+    text-shadow: 2px 2px black;
+    text-align: center;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 1rem;
+}
 }
