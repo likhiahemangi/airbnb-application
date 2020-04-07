@@ -12,24 +12,24 @@
   <body>
        <div>
          <a href="/admin" class="nav1">Add Task</a>
-          <a href="/adminedit" class="nav1">Update Task</a>
+          <a href="#" class="nav1">Update Task</a>
            <a href="/home" class="linklogout" >Logout</a>   
        </div>
        <div class="table">
            <h2 class="hema">Welcome Hemangi</h2>
-    <form method="POST" class="adminform" action="adminupdate/update/{{_id}}?method=PUT" >
+    <form method="POST" class="adminform" action="/update/{{_id}}?method=PUT" >
 
         <label class="l">Title</label>
         <input type="text" name="title" id="title" value="{{title}}">
 
         <label class="l">Description</label>
-        <input type="text" id="description" name="description" value="{{description}}">
+        <input type="text" id="description" name="description"value="{{description}}"> 
 
         <label class="l">Price per Night</label>
         <input type="text" name="Price" id="Price" value="{{Price}}">
 
         <label class="l">Room Location</label>
-         <input type="text" name="priority" id="priority" value="{{priority}}">
+         <input type="text" name="priority" id="priority" value="{{priority}}" >
 
         <label class="l">Status</label>
          <input type="text" name="status" id="Price" value="{{status}}">
@@ -37,7 +37,7 @@
         <label class="l">Upload an image</label> 
          <input type="file" name="image" id="image" class="uploadimage" >
 
-         <button type="submit" class="task" id="task add" >Update Task </button>
+         <button type="submit" class="task" id="task add" > Update Task </button>
        </form>
     </div>
    

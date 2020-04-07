@@ -24,11 +24,14 @@
     </section>
      <div> 
             <a href="/home" class="nav">Home </a>
-            <a href="/login" class="nav">Explore</a>
-            <a href="/admin" class="nav">Product</a>
-            <a href="#" class="nav">Solutions</a>
-            <a href="#" class="nav">Resources</a>
+            <a href="/roomlisting" class="nav">Explore</a>
+            {{#if user }}
             <a href="/logout" class="nav">LogOut</a>
+            {{else}}
+            <a href="/userregistration" class="nav">Join</a>
+            <a href="/login" class="nav">Login</a>
+            {{/if}}
+            
        </div>
     
   <section>

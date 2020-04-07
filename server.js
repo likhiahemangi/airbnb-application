@@ -4,6 +4,13 @@ const exphbs  = require('express-handlebars');
 const bodyParser = require('body-parser')
 const productModel = require("./models/roomlisting");
 const Feacturedmodel = require("./models/feacturedroom");
+const session = require('express-session'); 
+const bcrypt = require("bcryptjs");
+const authentication=require("./middleware/auth");
+const dashboardLoader = require("./middleware/authorazation");
+
+
+
 require('dotenv').config({path:"./config.env"})
 const taskmodel = require("./models/task");
 const adminmodel = require("./models/user");
@@ -12,16 +19,6 @@ const adminmodel = require("./models/user");
 app.use(express.static('static'));
 app.use(bodyParser.urlencoded({extended: false}))
 
-app.use((req,res,next)=>{
-
-    if(req.query.method=="PUT"){
-      req.method="PUT"
-    }
-    else if(req.query.method=="DELETE"){
-      req.method="DELETE"
-    }
-    next();
-})
 
 const mongoose = require('mongoose');
 mongoose.connect(process.env.mongo_db_connection_string, {useNewUrlParser: true, useUnifiedTopology: true})
@@ -31,6 +28,14 @@ mongoose.connect(process.env.mongo_db_connection_string, {useNewUrlParser: true,
  .catch(err=>console.log(`error in database : ${err}`));
 
 
+//autorization//
+ app.set('trust proxy',1)
+ app.use(session({
+         secret : 'keyboard cat',
+         resave: false,
+         saveUninitialized : true,
+ 
+ }))
 
 //This tells Express to set or register Handlebars as its' Template/View Engine
 app.engine('handlebars', exphbs());
@@ -76,7 +81,7 @@ app.get("/logout",(req,res)=>{
       headingInfo : "Log Out Page",
 }); 
 });
-app.get("/userdashboard",(req,res)=>{
+app.get("/profilepage",(req,res)=>{
 
        taskmodel.find()
        .then((store)=>{
@@ -92,14 +97,15 @@ app.get("/userdashboard",(req,res)=>{
         email: result.email
  }
         });
-        res.render("adminedit",{
+        res.render("profilepage",{
           data: filtertask
    })
        })
   
     .catch(err=>console.log(`error in pulling database : ${err}`));
+
        });
- 
+
 
 app.get("/login",(req,res)=>{
 
@@ -116,6 +122,15 @@ app.get("/admin",(req,res)=>{
       headingInfo : "Admin  Page",
    });
 });
+
+app.get("/updateadmin",(req,res)=>{
+
+  res.render("updateadmin",{
+      title: "Admin Update page",
+      headingInfo : "Admin Update Page",
+   });
+});
+
 app.get("/SenddataAdmin",(req,res)=>{
 
   res.render("admin",{
@@ -150,7 +165,7 @@ app.get("/adminedit",(req,res)=>{
    const filtertask = store.map(result=>{
 
      return{
-
+      id : result._id,
       title : result.title,
       description: result.description,
       Price: result.Price,
@@ -166,6 +181,7 @@ app.get("/adminedit",(req,res)=>{
 
 .catch(err=>console.log(`error in pulling database : ${err}`));
   });
+app.get("/welcome",authentication,dashboardLoader);
 
 
 app.get("/sendMessage",(req,res)=>{
@@ -202,7 +218,7 @@ app.post("/sendMessage",(req,res)=>{
     }
     if(req.body.phoneNo =="")
     {
-     errors.push("Sorry, you must enter a phone number");
+    errors.push("Sorry, you must enter a phone number");
     }
     else if(req.body.phoneNo.length<10)
   {
@@ -219,8 +235,8 @@ app.post("/sendMessage",(req,res)=>{
     if(errors.length > 0)
     {
      console.log(errors);
-     res.render("userregistration",{
-       messages : errors
+     res.rendeer("userregistration",{
+       messagesr : errors
      })
     }
     else
@@ -238,7 +254,7 @@ app.post("/sendMessage",(req,res)=>{
       };
       sgMail.send(msg)
       .then(()=>{
-        res.redirect("userdashboard");
+        res.redirect("profilepage");
       })
       .catch((err)=>{
         console.log(err);
@@ -252,7 +268,7 @@ app.post("/sendMessage",(req,res)=>{
        })
       .then(message => {
         console.log(message.sid);
-        res.render("userdashboard");
+        res.render("profilepage");
       })
     }
     const newuser = {
@@ -269,56 +285,83 @@ app.post("/sendMessage",(req,res)=>{
      const task = new  taskmodel(newuser) ;
      task.save() 
      .then(()=>{
-       res.redirect("userdashboard");
+       res.redirect("profilepage");
      })
      .catch(err=>console.log(`error in pulling database : ${err}`));
 });
 
 app.post("/sendLogin",(req,res)=>{
+  taskmodel.findOne({email:req.body.email})
+  .then(user=>{
 
-  const errors= [];
+    const errors= [];
 
-if(req.body.uname =="")
-  {
-    errors.push("Sorry, you must enter a User Name");
-  }
-  if(req.body.psw =="")
-  {
-    errors.push("Sorry, you must enter a Password");
-  }
-  else if(req.body.psw.length<4)
-  {
-    errors.push("Sorry, you must enter a Password at least 8 characters ");
-  }
-  if(req.body.uname =="likhiahemangi" && req.body.psw=="1234")
-  {
-    res.redirect("roomlisting");
-  }
-  else if(req.body.uname !="likhiahemangi" || req.body.psw!="1234" || req.body.uname!="Admin" || req.body.psw!="1234")
-  {
-    errors.push("Sorry, The Username either password is wrong ");
-  }
-  if(req.body.uname=="Admin" && req.body.psw=="1234")
-  {
-     res.redirect("admin");
-  }
-   if(errors.length > 0)
-  {
-   console.log(errors);
-   res.render("login",{
-     messages : errors
-   })
-  }
-  else{
-    res.redirect("roomlisting");
-  }
+    //email not found
+    if(user==null  && errors.length>0)
+    {
+        errors.push("Sorry, your email and/or password incorrect");
+        res.render("login",{
+                   errors
+        })
+            
+    }
+
+    //email is found
+    else
+    {
+        bcrypt.compare(req.body.psw, user.psw)
+        .then(isMatched=>{
+            
+            if(isMatched)
+            {
+                //cretae our sessoin
+                req.session.userInfo = user;
+               
+                res.redirect("welcome");
+            }
+
+            else
+            {
+                errors.push("Sorry, your email and/or password incorrect ");
+                res.render("login",{
+                    errors
+                })
+            }
+
+        })
+        .catch(err=>console.log(`Error ${err}`));
+    }
+
+
+})
+
+.catch(err=>console.log(`Error ${err}`));
 });
-app.get("/adminupdate/:id",(req,res)=>{
+app.use((req,res,next)=>{
 
-  adminmodel.findById(req.params._id)
+  res.user=req.session.userInfo;
+  next();
+})
+
+//update and delete//
+app.use((req,res,next)=>{
+
+  if(req.query.method=="PUT"){
+    req.method="PUT"
+  }
+  else if(req.query.method=="DELETE"){
+    req.method="DELETE"
+  }
+  next();
+})
+
+
+app.get("/edit/:id",(req,res)=>{
+
+  adminmodel.findById(req.params.id)
   .then((task)=>{
       const{_id,title,description,Price,priority,status} = task;
-      res.render("adminupdate",{
+      res.render("updateadmin",{
             _id,
             title, 
             description,
@@ -328,31 +371,32 @@ app.get("/adminupdate/:id",(req,res)=>{
       });
   })
   .catch(err=>console.log(`error in pulling database : ${err}`));
-
 });
+
 app.put("/update/:id",(req,res)=>{
     
-  const useradmin = {
-        title : req.body.title,
-        description : req.body.description,
-        Price : req.body.Price,
-        priority : req.body.priority,
-        status : req.body.status,
-         image : req.body.image,
+  const newuseradmin = {
+    title : req.body.title,
+    description : req.body.description,
+    Price : req.body.Price,
+    priority : req.body.priority,
+    status : req.body.status,
+    image : req.body.image,
   } 
-       adminmodel.updateOne({_id:req.params.id},useradmin)
+       adminmodel.updateOne({_id:req.params.id},newuseradmin)
        .then(()=>{
-             res.redirect("adminedit");
+             res.redirect("/adminedit");
        })
-        .catch(err=>console.log(`error in pulling database : ${err}`));
+        .catch(err=>console.log(`error in update database : ${err}`));
 });
 app.delete("/delete/:id",(req,res)=>{
-  adminmodel.updateOne({_id:req.params.id})
+  adminmodel.deleteOne({_id:req.params.id})
   .then(()=>{
-    res.redirect("adminedit");
+    res.redirect("/adminedit");
 })
-.catch(err=>console.log(`error in pulling database : ${err}`));
+.catch(err=>console.log(`error in delete database : ${err}`));
 });
+
 
 
 const PORT = process.env.PORT ||  1112;

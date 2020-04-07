@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/css/login.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{title}} </title>
-     {{#each messages}}
+     {{#each errors}}
 
     <div class="errors">{{this}}</div>
 
@@ -19,7 +19,7 @@
         <h1>Login with <a href="#" class="link">Facebook</a> Either <a href="#" class="link">Google</a> </h1>
         <h1>Don't have an account? <a href="/userregistration" class="link">Sign Up Here</a></h1>
         <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname">
+        <input type="text" placeholder="Enter Username" name="email">
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw">
         <button type="submit">Login</button>

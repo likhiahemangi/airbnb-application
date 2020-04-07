@@ -43,6 +43,11 @@ const taskSchema = new Schema({
     {
         type:String,
         required:true    
+    },
+    type:
+    {
+        type:String,
+        default : "User"
     }
 
 });

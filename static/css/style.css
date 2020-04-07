@@ -402,11 +402,11 @@ li{
      }
     .image-display{
       display: grid;
-      grid-template-columns: 1fr ;
+      grid-template-columns: 1fr 1fr 1fr ;
    }
    img{
-      height: 20rem;
-      width: 30rem;
+      height: 12rem;
+      width: 18rem;
       margin: auto ;
       padding: auto;
       display: block;
@@ -455,14 +455,14 @@ h4{
     border: 2px solid burlywood;
     margin-left: auto;
     padding-left: 2rem;
-    width: 11rem;
+    width: 20rem;
     height: 2rem;
     margin-left: 4rem;
 }
 select{
     margin-left: 4rem;
     height: 2rem;
-    width: 13rem;
+    width: 22rem;
     padding-left: 10rem;
     border: 2px solid burlywood;
 }
